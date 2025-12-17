@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webappser</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap&subset=cyrillic" rel="stylesheet">
+    
+    <!-- Highlight.js VS Code Theme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+    <!-- Highlight.js Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- Marked.js for Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8f9fa;
+      }
+      /* Custom scrollbar for preview */
+      .preview-scroll::-webkit-scrollbar {
+        width: 8px;
+      }
+      .preview-scroll::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      .preview-scroll::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      .preview-scroll::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+      @keyframes gradient-x {
+        0%, 100% {
+            background-size: 200% 200%;
+            background-position: left center;
+        }
+        50% {
+            background-size: 200% 200%;
+            background-position: right center;
+        }
+      }
+      .animate-gradient {
+        background-size: 200%;
+        animation: gradient-x 3s ease infinite;
+      }
+      
+      /* Markdown Styles */
+      .prose pre {
+        background: #1e1e1e !important;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin: 0.5rem 0;
+        overflow-x: auto;
+      }
+      .prose code {
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-size: 0.9em;
+      }
+      .prose p {
+        margin-bottom: 0.5rem;
+      }
+      .prose ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .prose ol {
+        list-style-type: decimal;
+        padding-left: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "jszip": "https://aistudiocdn.com/jszip@3.10.1/dist/jszip.min.js"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
